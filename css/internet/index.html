@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Internet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="main-container">
+    <header>
+      <img id="globe" src="globe.png" alt="globe" class="i-block vertical-top">
+      <h1 class="i-block">The Inter<span class="blue-span">net</span></h1>
+      <h2 class="i-block">The World Wide Web</h2>
+    </header>
+    <aside class="i-block vertical-top">
+      <div id="whats-internet">
+        <h3 class="i-block">So, what's an <span>Internet?</span></h3>
+        <h4 class="i-block">An <span class="blue-span">Inter</span>connected <span class="blue-span">Net</span>work of
+          computers all around the world!</h4>
+        <button class="i-block aside-button" id="blue-button">WATCH A VIDEO</button>
+        <button class="i-block aside-button" id="orange-button">MORE RESOURCES</button>
+      </div>
+      <div id="reinvent">
+        <h2 class="i-block">Reinvent your career in just 14 weeks</h2>
+        <img class="i-block" src="ninja.png" alt="ninja">
+        <button class="i-block">Learn More >>></button>
+      </div>
+    </aside>
+    <div id="wrapper" class="i-block">
+      <section>
+        <div id="main-top-left" class="i-block vertical-top">
+          <a href="#"><img src="home.png" alt="home" id="home-icon" class="i-block"></a>
+          <h2 class="i-block">DNS</h2>
+        </div>
+        <img src="phone.png" alt="phone" id="phone-icon" class="i-block">
+        <div id="main-top-right" class="i-block vertical-top">
+          <p class="i-block vertical-top">Mon - Fri 9 a.m. - 5 p.m. (EST)</p>
+          <h3 class="i-block vertical-top">855.967.3787</h3>
+          <p class="i-block">International +1.617.963.0555</p>
+        </div>
+      </section>
+      <main>
+        <h1 class="i-block">Clients and Servers</h1>
+        <p class="i-block">Computers connected to the <span class="teal-span">Web</span> are called <span
+            class="black-span">clients</span> and <span class="black-span">servers.</span></p>
+        <ul class="i-block">
+          <li><span class="teal-span">Clients</span> are the typical Web user's Internet-connected devices (for example,
+            your computer connected to your Wi-Fi, or your phone connected to your mobile network) and <span
+              class="teal-span">Web-accessing software</span> available on those devices (usually a web browser like
+            Firefox or Chrome).</li>
+          <li><span class="teal-span">Servers</span> are computers that store<span class="teal-span"> webpages</span>,
+            <span class="teal-span">sites</span>, or <span class="teal-span">apps</span>. When a client device wants to
+            access a webpage, a copy of the webpage is downloaded from the server onto the client machine to be
+            displayed in the user's web browser.</li>
+        </ul>
+        <img class="i-block" src="client_server.jpg" alt="client server">
+        <h1 class="i-block">So What Actually Happens?</h1>
+        <ol class="i-block">
+          <li>The browser goes into the <span class="teal-span">DNS server</span> and finds the address of the <span
+              class="teal-span">server</span> that the website lives on.</li>
+          <li>The browser sends an <span class="teal-span">HTTP request</span> message to the server asking it to send a
+            copy of the website to the client.</li>
+          <li>If the server approves the client's request, the server sends the client a <span class="teal-span">"200
+              OK" message</span>, which means "Permission granted! Here you go!", and then starts sending the website's
+            files to the browser as a series of small chunks.</li>
+          <li>The browser assembles the small chunks into a complete website and displays it to you!</li>
+        </ol>
+      </main>
+    </div>
+    <footer>
+      <img class="i-block vertical-top" src="html.png" alt="html">
+      <h2 class="i-block vertical-top">The Big 3 - HTML, CSS, JavaScript</h2>
+      <p class="i-block vertical-top">While the server can process information in many different languages, the files
+        that they serve to the client are <span>always</span> going to be some combination of HTML, CSS, and JavaScript!
+      </p>
+      <span id="bottom" class="i-block vertical-top">Learn more about the Big 3 <a class="teal-span" href="#">here</a>
+        !</span>
+    </footer>
+  </div>
+</body>
+
+</html>

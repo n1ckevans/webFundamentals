@@ -1,0 +1,8 @@
+USE twitter 
+INSERT INTO tweets (tweet, user_id) 
+VALUES ('TWITTER IS LAME', 1);
+SELECT * FROM tweets;
+UPDATE tweets SET tweet = 'twitter sucks'
+WHERE user_id > 0;
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM faves;

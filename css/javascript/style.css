@@ -1,0 +1,159 @@
+html, body, div, span, applet, object, iframe, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#container {
+  background-color: #1c335d;
+  width: 970px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+#header {
+  background-color: #cf2f36;
+  color: #c2d6ec;
+  display: inline-block;
+  width: 945px;
+  height: 80px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 15px;
+}
+
+#menu {
+  background-color: #2a7d8c;
+  color: #69dbdf;
+  float: left;
+  width: 200px;
+  height: 150px;
+  border-radius: 15px;
+  margin-left: 10px;
+  margin-top: 20px;
+  margin-right: 20px; 
+  font-size: 12px;
+  padding: 5px;
+}
+
+#content {
+  background-color: #0e1722;
+  color: #c2d6ec;
+  display: inline-block;
+  width: 700px;
+  height: 600px;
+  margin-left: 5px;
+  border-radius: 15px;
+  margin-top: 20px;
+  font-size: 15px;
+  padding: 10px;
+}
+
+#footer {
+  background-color: #5d6573;
+  color: #b7d3e2;
+  display: inline-block;
+  width: 945px;
+  height: 50px;
+  border-radius: 15px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#banner {
+  margin: 10px; 
+  font-size: 30px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+#home  {
+  margin-left: 30px; 
+  color: #69dbdf;
+  
+}
+
+a {
+  color: #69dbdf;
+  margin-left: 1px;
+}
+
+li  {
+  text-indent: -4px;
+}
+
+.list {
+ margin: 5px;
+ padding: 10px;
+ display: inline;
+}
+
+h3 {
+  color: #6273d3;
+  font-size: 15px;
+  display: inline;
+}
+
+#title {
+  font-size: 20px; 
+  padding: 5px;
+  margin: 5px;
+}
+
+#description {
+  font-size: 15px; 
+  padding: 5px;
+  margin: 5px;
+}
+
+#bottom{
+  font-size: 15px;   
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.link {
+  display: inline;
+  margin-left: 5px;
+  margin-right: 1px;
+}
+
+.menu-links {
+  margin-left: -20px;
+}

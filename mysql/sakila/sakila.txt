@@ -1,0 +1,85 @@
+1) SELECT city.city_id AS city_id, city.city AS city, customer.first_name AS first_name, customer.last_name AS last_name, customer.email AS email,
+address.address AS address 
+FROM customer
+JOIN address
+ON customer.address_id = address.address_id
+JOIN city 
+ON address.city_id = city.city_id
+WHERE city.city_id = 312
+
+2) SELECT film.film_id AS film_id, film.title AS title, film.description AS description, film.release_year AS release_year, film.rating AS rating,     film.special_features AS special_features, category.name AS genre
+   FROM film
+   LEFT OUTER JOIN film_category
+   ON film.film_id = film_category.film_id
+   LEFT OUTER JOIN category
+   ON film_category.category_id = category.category_id
+   WHERE category.name = "Comedy";
+
+3) SELECT actor.actor_id AS actor_id, CONCAT(actor.first_name, ' ', actor.last_name) AS actor_name, film.title AS film_title, film.description AS description
+   FROM actor
+   LEFT OUTER JOIN film_actor
+   ON actor.actor_id = film_actor.actor_id
+   LEFT OUTER JOIN film
+   ON film_actor.film_id = film.film_id
+   WHERE actor.actor_id = 5;
+
+   4) SELECT store.store_id, city.city_id, first_name AS first_name, customer.last_name AS last_name, customer.email AS email, address.address AS address
+   FROM customer
+   LEFT JOIN  store
+   ON customer.store_id = store.store_id
+   LEFT JOIN address
+   ON customer.address_id = address.address_id
+   LEFT JOIN city
+   ON address.city_id = city.city_id
+   WHERE store.store_id = 1
+   AND city.city_id = 1 
+   OR  city.city_id = 42
+   OR city.city_id =  312
+   OR city.city_id = 459;
+
+5) SELECT film.title, film.description, film.release_year, film.rating, film.special_features
+   FROM actor
+   LEFT OUTER JOIN film_actor
+   ON actor.actor_id = film_actor.actor_id
+   LEFT OUTER JOIN film
+   ON film_actor.film_id = film.film_id
+   WHERE actor.actor_id = 15
+   AND film.rating = 'G'
+   AND film.special_features LIKE "b%"
+
+6) SELECT film.film_id, film.title, actor.actor_id, CONCAT(actor.first_name, ' ', actor.last_name) AS actor_name
+   FROM actor
+   LEFT OUTER JOIN film_actor
+   ON actor.actor_id = film_actor.actor_id
+   LEFT OUTER JOIN film
+   ON film_actor.film_id = film.film_id
+   WHERE film.film_id = 369 
+   ORDER BY actor.actor_id ASC
+
+7) -- rental.rate is not in databse
+   SELECT film.film_id, title, description, release_year, rating, special_features, category.name
+   FROM film
+   LEFT OUTER JOIN film_category
+   ON film.film_id = film_category.film_id
+   LEFT OUTER JOIN category
+   ON film_category.category_id = category.category_id
+   LEFT JOIN inventory 
+   ON inventory.film_id = film.film_id
+   LEFT JOIN rental
+   ON rental.inventory_id = inventory.inventory_id
+   WHERE category.name = "Drama"
+   GROUP BY film_id
+   ORDER BY film_id
+
+8) SELECT actor.actor_id, CONCAT(actor.first_name, ' ', actor.last_name) AS actor_name, film.film_id, title, description, release_year, rating, special_features, category.name as genre
+   FROM film
+   LEFT OUTER JOIN film_category
+   ON film.film_id = film_category.film_id
+   LEFT  JOIN category
+   ON film_category.category_id = category.category_id
+   LEFT JOIN film_actor
+   ON film.film_id = film_actor.film_id
+   LEFT JOIN actor
+   ON film_actor.actor_id = actor.actor_id
+   WHERE category.name = "Action"
+   AND CONCAT(actor.first_name, ' ', actor.last_name) = "SANDRA KILMER"
